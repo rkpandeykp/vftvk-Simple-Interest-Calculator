@@ -2,9 +2,15 @@ function compute()
 {
     var principal = document.getElementById("principal").value;
     if(parseInt(principal)<=0)              //if input is negative
-     alert("Enter a positive number");
+    {
+		alert("Enter a positive number");
+		document.getElementById("principal").focus();
+	}
     else if(principal=="")                  //if input is empty
-     alert("please enter the principal amount");
+    {
+        alert("please enter the principal amount");
+        document.getElementById("principal").focus();
+    }
     else
     {
         var rate = document.getElementById("rate").value;   
